@@ -1,0 +1,4 @@
+"Type"	"Width"	"Height"	"X"	"Y"	"Xcoords"	"Ycoords"
+"java.awt.geom.Rectangle2D$Double"	"926.0"	"320.0"	"308.0"	"9.0"	"[308, 1234, 1234]"	"[329, 329, 9]"
+"java.awt.geom.Rectangle2D$Double"	"231.0"	"425.0"	"52.0"	"3.0"	"[52, 283, 283]"	"[428, 428, 3]"
+"java.awt.geom.Ellipse2D$Double"	"77.0"	"68.0"	"799.0"	"349.0"	"[]"	"[]"
