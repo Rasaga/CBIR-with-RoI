@@ -73,7 +73,7 @@
     
     <!-- Genera un .jar que empaqueta todas las bibliotecas (.jar) incluidos en /lib (@Jesús Chamorro) -->
     
-    <!-- Desactivado
+
     
     <target name="-post-jar">
         <property name="pack.jar" value="dist/${application.title}.pack.jar"/>
@@ -87,6 +87,8 @@
         </jar>
     </target>
     
-    -->
+
+    
+    
     
 </project>

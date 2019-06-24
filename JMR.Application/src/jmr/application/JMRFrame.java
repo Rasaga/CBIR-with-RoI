@@ -1373,6 +1373,38 @@ public class JMRFrame extends javax.swing.JFrame {
         vi.setVisible(true);
     }
     
+        /**
+     * Imprime por pantalla una imagen que se pase por parámetro, junto el csv
+     *
+     * @param img La imagen que se desee imprimir por pantalla
+     * @param str La url de la imagen
+     */
+    
+    public void imprimirImagen(BufferedImage img, String str) {
+//        System.out.println(str);
+        String sub = str.substring(6);
+//        System.out.println(sub);
+        String nameCSV = sub.replaceFirst("[.][^.]+$", "").concat(".csv");
+        String replace = nameCSV.replace("%20", " ");
+//        System.out.println(replace);
+        File fileCSV = new File(replace);
+        InternalWindowImageDrawable vi = new InternalWindowImageDrawable(this);
+        vi.setImage(img);
+        vi.setSize(img.getWidth(),img.getHeight());
+        if (fileCSV.exists()) {
+            // EJECUTAR ALGORITMO QUE ABRE UN FILE.CSV Y DEVUELVE UNOS SHAPES
+//            System.out.println("Existe");
+            vi.setCSV(fileCSV);
+            ArrayList<Shape> shapes = CSVTools.OpenCSV(fileCSV);
+            for (int i = 0; i < shapes.size(); i++) {
+                vi.getCanvas2DImage().addShape(shapes.get(i));
+            }
+        }
+                        
+        this.escritorio.add(vi);
+        vi.setVisible(true);
+    }
+    
     /**
      * Métodos para actualizar el tipo de comparador.
      * Dependiendo de las opciones elegidas, se actualizará el tipo de comparador usado.

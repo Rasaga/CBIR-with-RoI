@@ -25,7 +25,7 @@
     <Component class="jmr.iu.ImageListPanel" name="imageListPanel1">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new jmr.iu.ImageListPanel(null, new Dimension(100,100))"/>
-        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="imageListPanel1.addImageSelectionListener(new ImageListPanel.ImageSelectionListener() {&#xa;            public void imageSelected(ImageListPanel.ImageSelectionEvent evt) {&#xa;                //System.out.println(evt.getLabel());&#xa;                image = (BufferedImage) evt.getSource();&#xa;                if(image!=null){&#xa;                    vp.imprimirImagen(image);&#xa;                }&#xa;            }&#xa;       });"/>
+        <AuxValue name="JavaCodeGenerator_ListenersCodePost" type="java.lang.String" value="imageListPanel1.addImageSelectionListener(new ImageListPanel.ImageSelectionListener() {&#xa;            public void imageSelected(ImageListPanel.ImageSelectionEvent evt) {&#xa;                //System.out.println(evt.getLabel());&#xa;                String str = evt.getLabel();&#xa;                image = (BufferedImage) evt.getSource();&#xa;                if(image!=null){&#xa;                    vp.imprimirImagen(image,str);&#xa;                }&#xa;            }&#xa;       });"/>
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">

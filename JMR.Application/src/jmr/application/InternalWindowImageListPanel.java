@@ -76,9 +76,10 @@ public class InternalWindowImageListPanel extends javax.swing.JInternalFrame {
         imageListPanel1.addImageSelectionListener(new ImageListPanel.ImageSelectionListener() {
             public void imageSelected(ImageListPanel.ImageSelectionEvent evt) {
                 //System.out.println(evt.getLabel());
+                String str = evt.getLabel();
                 image = (BufferedImage) evt.getSource();
                 if(image!=null){
-                    vp.imprimirImagen(image);
+                    vp.imprimirImagen(image,str);
                 }
             }
         });
